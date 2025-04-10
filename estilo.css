@@ -1,0 +1,609 @@
+/* RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(/img/fundo.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* ------------------ HEADER ------------------ */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.logo {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 40px;
+    padding: 6px;
+    border-radius: 5px;
+    text-shadow: 2px 2px 1px black;
+    transition: background-color 1s;
+}
+
+.logo:hover {
+    background-color: #000;
+}
+
+header ul {
+    display: flex;
+    margin-right: 40px;
+    gap: 1em;
+}
+
+header ul .li,
+.home {
+    list-style: none;
+}
+
+header ul .a,
+.home-a {
+    text-decoration: none;
+    color: #000;
+    font-size: 17px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.home-a {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.home-a:hover,
+header ul .a:hover {
+    color: #fff;
+    background-color: #000;
+    transition: .5s;
+}
+
+header ul .li:hover {
+    transform: translateY(7px);
+    transition: 0.5s;
+}
+
+/* ------------------ INÍCIO ------------------ */
+.inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    gap: 5em;
+    padding-top: 60px;
+}
+
+.titulo {
+    width: 300px;
+    animation: fadeInUp 1.5s ease forwards;
+}
+
+.titulo h1 {
+    font-size: 50px;
+    border-bottom: 2px solid #fff;
+    padding: 4px;
+    color: #fff;
+}
+
+.titulo p {
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    padding: 8px;
+    color: #fff;
+}
+
+.botoes {
+    display: flex;
+    gap: 1em;
+    margin-top: 20px;
+    margin-left: 75px;
+}
+
+.botoes a {
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.4s ease;
+}
+
+.botoes a:hover {
+    font-weight: 700;
+    transform: translateY(-10px);
+    box-shadow: 0 0 10px white;
+    transition: .5s;
+}
+
+.img-titulo {
+    border-radius: 5px;
+    width: 300px;
+    height: 300px;
+    border: 2px solid #fff;
+    animation: fadeInUp 1.5s ease forwards;
+    transition: box-shadow .5s;
+}
+
+.img-titulo:hover {
+    box-shadow: 0 0 10px white;
+}
+
+/* ------------------ SEÇÃO UM ------------------ */
+.secaoUm {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 50px 0;
+}
+
+.titulo-secaoUm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.titulo-secaoUm h2,
+.titulo-secaoUm p {
+    color: #fff;
+    text-shadow: 3px 3px 1px black;
+}
+
+.titulo-secaoUm h2 {
+    font-size: 35px;
+}
+
+.titulo-secaoUm p {
+    font-size: 13px;
+    font-weight: 700;
+    width: 300px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    margin-top: -50px;
+    gap: 4em;
+    flex-wrap: wrap;
+}
+
+section article {
+    width: 150px;
+    height: 100px;
+    border-radius: 5px;
+}
+
+section article img {
+    border-radius: 5px;
+    transition: .5s;
+}
+
+section article img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 10px white;
+}
+
+/* ------------------ FIM SEÇÃO UM ------------------ */
+.fimSecaoUm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.titulo-ul h2 {
+    margin-bottom: 45px;
+    width: 100px;
+    color: #fff;
+    font-size: 35px;
+    text-shadow: 2px 2px 1px #000;
+}
+
+.titulo-ul li {
+    color: #fff;
+    text-shadow: 2px 2px 1px #000;
+    padding: 5px;
+}
+
+.img-secaoUm {
+    width: 300px;
+    height: 150px;
+    border-radius: 20px;
+}
+
+.img-secaoUm img:hover {
+    box-shadow: 0 0 10px white;
+    transform: rotate(40deg);
+    transition: .5s;
+}
+
+/* ------------------ SEÇÃO DOIS ------------------ */
+.secaoDois {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2em;
+    padding: 50px 0;
+}
+
+.titulo-secaoDois h2,
+.titulo-secaoDois p {
+    color: #fff;
+    text-shadow: 2px 2px 1px #000;
+}
+
+.titulo-secaoDois h2 {
+    font-size: 35px;
+}
+
+.titulo-secaoDois p {
+    font-size: 10px;
+    padding: 8px;
+    text-align: center;
+}
+
+.articles {
+    display: flex;
+    gap: 5em;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.article {
+    width: 150px;
+    height: 200px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    transition: .5s;
+}
+
+.article:hover {
+    box-shadow: 0 0 10px white;
+}
+
+.article p {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 5px;
+    transition: .5s;
+}
+
+.article p:hover {
+    font-weight: 700;
+    background-color: #000;
+    box-shadow: 0 0 10px #fff;
+}
+
+/* ---------- ENDEREÇOS ---------- */
+.enderecos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 3em;
+    flex-direction: column;
+}
+
+.titulo-enderecos {
+    color: #fff;
+    text-shadow: 2px 2px 1px #000;
+    font-size: 35px;
+    font-weight: 700;
+    margin-top: 50px;
+}
+
+.localizacao {
+    width: 600px;
+    height: 400px;
+    border-radius: 5px;
+    transition: .5s;
+}
+
+.localizacao:hover {
+    box-shadow: 0 0 10px white;
+}
+
+/* ------------------ ANIMAÇÕES ------------------ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+[data-animar] {
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+[data-animar="esquerda"] {
+    transform: translateX(-60px);
+}
+
+[data-animar="direita"] {
+    transform: translateX(60px);
+}
+
+[data-animar="cima"] {
+    transform: translateY(-60px);
+}
+
+[data-animar="baixo"] {
+    transform: translateY(60px);
+}
+
+[data-animar].ativo {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+.paragrafo-delay {
+    transition-delay: 1s !important;
+}
+
+/* ------------------ RESPONSIVIDADE ------------------ */
+@media (max-width: 1024px) {
+    .inicio {
+        text-align: center;
+        gap: 2em;
+        padding: 5px;
+        flex-direction: column-reverse;
+    }
+
+    .localizacao {
+        width: 300px;
+        height: 200px;
+    }
+
+    .titulo-enderecos {
+        font-size: 28px;
+    }
+
+    .logo {
+        font-size: 24px;
+        margin-left: 20px;
+    }
+
+    .titulo {
+        width: fit-content;
+    }
+
+    .botoes {
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .img-titulo {
+        width: 80%;
+        height: auto;
+        max-width: 300px;
+    }
+
+    section {
+        flex-wrap: wrap;
+        gap: 3em;
+    }
+
+    .fimSecaoUm {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .img-secaoUm {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .articles {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3em;
+    }
+
+    .articles p {
+        font-size: 13px;
+    }
+
+    header {
+        height: 65px;
+        padding: 10px 0;
+    }
+
+    header ul {
+        align-items: center;
+        margin-right: 20px;
+        gap: .5em;
+    }
+
+    header ul .a,
+    .home-a {
+        font-size: 12px;
+    }
+
+    .titulo-ul h2 {
+        width: 300px;
+    }
+}
+
+.contato {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.contato h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-shadow: 2px 2px 1px #000;
+}
+
+.contato p {
+    color: #ffffff;
+    text-shadow: 2px 2px 1px #000;
+}
+
+.form-contato {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin-inline: auto;
+}
+
+.form-contato input,
+.form-contato button {
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-contato input {
+    border: 1px solid #ccc;
+}
+
+.form-contato button {
+    background-color: #00ff22;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-contato button:hover {
+    background-color: #007510;
+}
+
+footer {
+    background-color: #fff;
+    width: 100%;
+    height: 50px;
+    margin-top: 100px;
+    display: flex;
+    gap: 5em;
+    text-align: center;
+}
+
+footer p {
+    color: #000;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*----768px----*/
+@media (max-width: 768px) {
+    .titulo h1 {
+        font-size: 32px;
+    }
+
+    .titulo p {
+        font-size: 13px;
+    }
+
+    .titulo-secaoUm h2,
+    .titulo-ul h2,
+    .titulo-secaoDois h2 {
+        font-size: 26px;
+    }
+
+    section article,
+    .article {
+        width: 120px;
+        height: 100px;
+    }
+
+    .articles {
+        margin-top: 5px;
+    }
+
+    .articles p {
+        font-size: 11px;
+    }
+
+    .secaoUm,
+    .secaoDois {
+        padding: 20px;
+    }
+
+    .form-contato input,
+    .form-contato button {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    footer{
+        flex-direction: column;
+        height: fit-content;
+        gap: 10px;
+    }
+}
+
+/*----480px----*/
+@media (max-width: 480px) {
+    .botoes {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .img-titulo,
+    .img-secaoUm {
+        width: 100%;
+        height: auto;
+    }
+
+    .logo {
+        font-size: 24px;
+        margin-left: 0;
+    }
+
+    header ul a {
+        font-size: 14px;
+    }
+
+    .titulo h1 {
+        font-size: 26px;
+    }
+}
